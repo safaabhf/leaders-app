@@ -1,1 +1,1 @@
-Bonjour a vous les GLSI ☺☻!c
+Bonjour a vous les GLSI ☺☻!
