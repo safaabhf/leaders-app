@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 04, 2024 at 10:01 AM
+-- Generation Time: Dec 04, 2024 at 10:38 AM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -67,6 +67,28 @@ INSERT INTO `matiere` (`Id_Matiere`, `Nom_Matiere`, `Coeff`) VALUES
 (1, 'mat1', 1),
 (2, 'mat2', 2),
 (3, 'mat3', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notes`
+--
+
+DROP TABLE IF EXISTS `notes`;
+CREATE TABLE IF NOT EXISTS `notes` (
+  `ID_Etudiant` int NOT NULL,
+  `id_Matiere` int NOT NULL,
+  `note` float DEFAULT NULL,
+  PRIMARY KEY (`ID_Etudiant`,`id_Matiere`),
+  KEY `id_Matiere` (`id_Matiere`)
+) ;
+
+--
+-- Dumping data for table `notes`
+--
+
+INSERT INTO `notes` (`ID_Etudiant`, `id_Matiere`, `note`) VALUES
+(1, 1, 10.5);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
